@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sách Mới Phát Hành - BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="animated-bg"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234 (8:00 - 21:00)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="he-thong-nha-sach.html"><i class="fas fa-map-marker-alt"></i> Hệ thống nhà sách</a>
+                    <a href="doi-tra-van-chuyen.html"><i class="fas fa-exchange-alt"></i> Đổi trả & Vận chuyển</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-book-open"></i> BookHaven</h1>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo Tên sách, Tác giả, hoặc Mã ISBN...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-utils">
+                    <a href="tra-cuu-don-hang.html" class="util-item order-tracking">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Tra cứu<br>Đơn hàng</span>
+                    </a>
+                    <a href="tai-khoan.html" class="util-item account">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập<br>Đăng ký</span>
+                    </a>
+                    <a href="gio-hang.html" class="util-item cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="danh-muc.html">Danh mục sách <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-col">
+                                <h3>Theo thể loại</h3>
+                                <a href="danh-muc.html?cat=van-hoc">Văn học</a>
+                                <a href="danh-muc.html?cat=kinh-te">Kinh tế</a>
+                                <a href="danh-muc.html?cat=ky-nang-song">Kỹ năng sống</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo nguồn gốc</h3>
+                                <a href="danh-muc.html?origin=trong-nuoc">Sách trong nước</a>
+                                <a href="danh-muc.html?origin=ngoai-van">Sách ngoại văn</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo định dạng</h3>
+                                <a href="danh-muc.html?format=sach-giay">Sách giấy</a>
+                                <a href="danh-muc.html?format=ebook">E-book</a>
+                                <a href="danh-muc.html?format=audiobook">Audiobook</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="sach-moi.html" class="active">Sách mới</a></li>
+                    <li><a href="ban-chay.html">Bán chạy</a></li>
+                    <li><a href="khuyen-mai.html" class="highlight">Khuyến mãi / Flash Sale</a></li>
+                    <li><a href="tac-gia.html">Tác giả / NXB</a></li>
+                    <li><a href="blog.html">Góc độc giả (Blog)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER TRANG -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <div>
+                <h2><i class="fas fa-sparkles"></i> Sách Mới Xuất Bản 2026</h2>
+                <p>Cập nhật liên tục những tác phẩm mới nhất vừa ra mắt độc giả</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / <span>Sách mới</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- SPOTLIGHT SÁCH MỚI CỦA THÁNG -->
+        <section style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 40px; display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+            <div style="font-size: 7rem; background: #ebf8ff; border-radius: 12px; width: 180px; height: 230px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                📚
+            </div>
+            <div style="flex: 1; min-width: 280px;">
+                <span class="badge-pill badge-green" style="margin-bottom: 10px; display: inline-block;">TIÊU ĐIỂM THÁNG NÀY</span>
+                <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 8px;">Kỷ Nguyên AI: Trí Tuệ Nhân Tạo & Tương Lai Loài Người</h3>
+                <p style="color: var(--text-light); margin-bottom: 12px; font-size: 0.95rem;">Tác giả: <strong>TS. Hoàng Minh & Đội ngũ Chuyên gia Công nghệ</strong> | NXB Tri Thức Mới</p>
+                <p style="color: var(--text-main); line-height: 1.6; margin-bottom: 20px; font-size: 0.92rem;">
+                    Tác phẩm phân tích sâu sắc làn sóng AI thế hệ mới, cơ hội nghề nghiệp và những biến đổi văn hoá - kinh tế toàn cầu trong 10 năm tới. Bản in đặc biệt kèm chữ ký và mã nghe Audio độc quyền.
+                </p>
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary-color);">210.000đ <span style="font-size: 1rem; color: #a0aec0; text-decoration: line-through;">260.000đ</span></div>
+                    <button class="btn-primary" onclick="addToCart('Kỷ Nguyên AI: Trí Tuệ Nhân Tạo', 210000, '📚', 'TS. Hoàng Minh')">
+                        <i class="fas fa-cart-plus"></i> Đặt mua ngay
+                    </button>
+                    <a href="danh-muc.html?cat=khoa-hoc" class="btn-secondary">Xem trích đoạn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LƯỚI SÁCH MỚI -->
+        <section>
+            <div class="section-header">
+                <h2>Tuyển Tập Sách Mới Vừa Cập Bến</h2>
+            </div>
+            <div class="book-grid">
+                <!-- Sách mới 1 -->
+                <div class="book-card">
+                    <span class="badge-pill badge-green" style="position: absolute; top: 12px; left: 12px; z-index: 2;">NEW</span>
+                    <div class="book-cover">
+                        📗
+                        <span class="discount-tag">-15%</span>
+                    </div>
+                    <h4>Nghệ Thuật Lắng Nghe Trong Giao Tiếp</h4>
+                    <p class="author">Dr. Emily Stone</p>
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(5.0 - Mới)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">128.000đ</span>
+                        <span class="old-price">150.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Nghệ Thuật Lắng Nghe Trong Giao Tiếp', 128000, '📗', 'Dr. Emily Stone')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Sách mới 2 -->
+                <div class="book-card">
+                    <span class="badge-pill badge-green" style="position: absolute; top: 12px; left: 12px; z-index: 2;">NEW</span>
+                    <div class="book-cover">
+                        📘
+                        <span class="discount-tag">-20%</span>
+                    </div>
+                    <h4>Thành Phố Dưới Biển Sâu</h4>
+                    <p class="author">Arthur C. Vance</p>
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>(4.7 - Mới)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">145.000đ</span>
+                        <span class="old-price">180.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Thành Phố Dưới Biển Sâu', 145000, '📘', 'Arthur C. Vance')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Sách mới 3 -->
+                <div class="book-card">
+                    <span class="badge-pill badge-green" style="position: absolute; top: 12px; left: 12px; z-index: 2;">NEW</span>
+                    <div class="book-cover">
+                        📙
+                        <span class="discount-tag">-10%</span>
+                    </div>
+                    <h4>Quản Trị Tài Chính Cá Nhân 4.0</h4>
+                    <p class="author">Nguyễn Thanh Long</p>
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(4.9 - Mới)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">135.000đ</span>
+                        <span class="old-price">150.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Quản Trị Tài Chính Cá Nhân 4.0', 135000, '📙', 'Nguyễn Thanh Long')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Sách mới 4 -->
+                <div class="book-card">
+                    <span class="badge-pill badge-green" style="position: absolute; top: 12px; left: 12px; z-index: 2;">NEW</span>
+                    <div class="book-cover">
+                        📕
+                        <span class="discount-tag">-18%</span>
+                    </div>
+                    <h4>Mùa Hè Cuối Cùng Ở Paris</h4>
+                    <p class="author">Claire Fontaine</p>
+                    <div class="book-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>(4.8 - Mới)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price">115.000đ</span>
+                        <span class="old-price">140.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Mùa Hè Cuối Cùng Ở Paris', 115000, '📕', 'Claire Fontaine')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-book-open"></i> BookHaven</h3>
+                <p>BookHaven là hệ thống nhà sách trực tuyến hiện đại hàng đầu, mang đến hàng chục nghìn đầu sách tinh hoa trong nước và quốc tế với trải nghiệm mua sắm tiện lợi, nhanh chóng.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Về BookHaven</h3>
+                <ul>
+                    <li><a href="danh-muc.html">Danh mục sách</a></li>
+                    <li><a href="sach-moi.html">Sách mới phát hành</a></li>
+                    <li><a href="ban-chay.html">Bán chạy nhất</a></li>
+                    <li><a href="tac-gia.html">Tác giả & Nhà xuất bản</a></li>
+                    <li><a href="blog.html">Góc độc giả & Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Chính sách đổi trả</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Phương thức vận chuyển</a></li>
+                    <li><a href="he-thong-nha-sach.html">Hệ thống nhà sách</a></li>
+                    <li><a href="tai-khoan.html">Tài khoản & Tích điểm</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Đăng Ký Nhận Bản Tin</h3>
+                <p>Nhận ngay voucher 15% cho đơn hàng đầu tiên và thông tin sách mới sớm nhất!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="btn-primary" style="padding:10px 18px;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 BookHaven. Tất cả các quyền được bảo lưu. Thiết kế & phát triển cho cộng đồng yêu sách.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
+            </div>
+            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

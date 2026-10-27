@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra Cứu Đơn Hàng - BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="animated-bg"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234 (8:00 - 21:00)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="he-thong-nha-sach.html"><i class="fas fa-map-marker-alt"></i> Hệ thống nhà sách</a>
+                    <a href="doi-tra-van-chuyen.html"><i class="fas fa-exchange-alt"></i> Đổi trả & Vận chuyển</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-book-open"></i> BookHaven</h1>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo Tên sách, Tác giả, hoặc Mã ISBN...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-utils">
+                    <a href="tra-cuu-don-hang.html" class="util-item order-tracking" style="color: var(--primary-color);">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Tra cứu<br>Đơn hàng</span>
+                    </a>
+                    <a href="tai-khoan.html" class="util-item account">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập<br>Đăng ký</span>
+                    </a>
+                    <a href="gio-hang.html" class="util-item cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="danh-muc.html">Danh mục sách <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-col">
+                                <h3>Theo thể loại</h3>
+                                <a href="danh-muc.html?cat=van-hoc">Văn học</a>
+                                <a href="danh-muc.html?cat=kinh-te">Kinh tế</a>
+                                <a href="danh-muc.html?cat=ky-nang-song">Kỹ năng sống</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo nguồn gốc</h3>
+                                <a href="danh-muc.html?origin=trong-nuoc">Sách trong nước</a>
+                                <a href="danh-muc.html?origin=ngoai-van">Sách ngoại văn</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo định dạng</h3>
+                                <a href="danh-muc.html?format=sach-giay">Sách giấy</a>
+                                <a href="danh-muc.html?format=ebook">E-book</a>
+                                <a href="danh-muc.html?format=audiobook">Audiobook</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="sach-moi.html">Sách mới</a></li>
+                    <li><a href="ban-chay.html">Bán chạy</a></li>
+                    <li><a href="khuyen-mai.html" class="highlight">Khuyến mãi / Flash Sale</a></li>
+                    <li><a href="tac-gia.html">Tác giả / NXB</a></li>
+                    <li><a href="blog.html">Góc độc giả (Blog)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER TRANG -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <div>
+                <h2><i class="fas fa-truck-fast"></i> Tra Cứu Tiến Trình Vận Chuyển</h2>
+                <p>Theo dõi vị trí và tình trạng đơn hàng của bạn theo thời gian thực</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / <span>Tra cứu đơn hàng</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="tracking-wrapper">
+            <!-- FORM NHẬP TRA CỨU -->
+            <div class="tracking-card">
+                <h3 style="font-size: 1.25rem; margin-bottom: 8px; color: var(--text-main);">Nhập Thông Tin Đơn Hàng</h3>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 20px;">Vui lòng nhập Mã đơn hàng (Ví dụ: <strong>BH12345</strong>) hoặc Số điện thoại người nhận.</p>
+
+                <div class="tracking-form">
+                    <input type="text" id="order-search-input" value="BH12345" placeholder="Ví dụ: BH12345 hoặc 0912345678...">
+                    <button class="btn-primary" onclick="lookupOrder()">
+                        <i class="fas fa-search"></i> Tra Cứu
+                    </button>
+                </div>
+
+                <!-- KẾT QUẢ TRA CỨU -->
+                <div id="tracking-result">
+                    <div style="background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 8px; padding: 16px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div>
+                            <span style="font-size: 0.85rem; color: #2b6cb0;">Mã đơn hàng:</span>
+                            <strong id="display-order-code" style="font-size: 1.15rem; color: var(--primary-color); margin-left: 6px;">BH12345</strong>
+                        </div>
+                        <div>
+                            <span class="badge-pill badge-blue">Đang vận chuyển</span>
+                        </div>
+                    </div>
+
+                    <!-- TIẾN TRÌNH VẬN CHUYỂN -->
+                    <div class="order-timeline">
+                        <div class="timeline-step completed">
+                            <div class="timeline-icon"><i class="fas fa-check"></i></div>
+                            <div class="timeline-label">Đặt hàng thành công</div>
+                            <div class="timeline-time">09:30 - 26/10/2026</div>
+                        </div>
+
+                        <div class="timeline-step completed">
+                            <div class="timeline-icon"><i class="fas fa-box"></i></div>
+                            <div class="timeline-label">Đã đóng gói kho</div>
+                            <div class="timeline-time">14:15 - 26/10/2026</div>
+                        </div>
+
+                        <div class="timeline-step active">
+                            <div class="timeline-icon"><i class="fas fa-truck"></i></div>
+                            <div class="timeline-label">Đang vận chuyển</div>
+                            <div class="timeline-time">10:00 - Hôm nay</div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-icon"><i class="fas fa-home"></i></div>
+                            <div class="timeline-label">Giao hàng dự kiến</div>
+                            <div class="timeline-time">Trước 18:00 ngày mai</div>
+                        </div>
+                    </div>
+
+                    <!-- THÔNG TIN CHI TIẾT ĐƠN HÀNG -->
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 30px;">
+                        <h4 style="font-size: 1.05rem; margin-bottom: 12px; color: var(--text-main);">Thông Tin Kiện Hàng</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; font-size: 0.9rem; color: #4a5568;">
+                            <div>
+                                <span style="color: #718096; display: block; font-size: 0.8rem;">Người nhận:</span>
+                                <strong>Nguyễn Văn Khang (0988 *** 123)</strong>
+                            </div>
+                            <div>
+                                <span style="color: #718096; display: block; font-size: 0.8rem;">Địa chỉ nhận hàng:</span>
+                                <strong>Quận Hoàn Kiếm, Hà Nội</strong>
+                            </div>
+                            <div>
+                                <span style="color: #718096; display: block; font-size: 0.8rem;">Đơn vị vận chuyển:</span>
+                                <strong>Giao Hàng Nhanh (GHN Express)</strong>
+                            </div>
+                            <div>
+                                <span style="color: #718096; display: block; font-size: 0.8rem;">Tổng thanh toán (COD):</span>
+                                <strong style="color: var(--secondary-color);">290.000đ (Đã áp mã BOOK10)</strong>
+                            </div>
+                        </div>
+
+                        <div style="background: #f8fafc; border-radius: 8px; padding: 15px; margin-top: 20px; font-size: 0.88rem;">
+                            <strong>Sản phẩm trong kiện hàng:</strong>
+                            <ul style="margin: 8px 0 0 20px; color: #4a5568;">
+                                <li>01 x Đắc Nhân Tâm (Bản tiếng Việt) - 75.000đ</li>
+                                <li>01 x Nhà Giả Kim - Paulo Coelho - 65.000đ</li>
+                                <li>01 x Sapiens: Lược Sử Loài Người - 150.000đ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-book-open"></i> BookHaven</h3>
+                <p>BookHaven là hệ thống nhà sách trực tuyến hiện đại hàng đầu, mang đến hàng chục nghìn đầu sách tinh hoa trong nước và quốc tế với trải nghiệm mua sắm tiện lợi, nhanh chóng.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Về BookHaven</h3>
+                <ul>
+                    <li><a href="danh-muc.html">Danh mục sách</a></li>
+                    <li><a href="sach-moi.html">Sách mới phát hành</a></li>
+                    <li><a href="ban-chay.html">Bán chạy nhất</a></li>
+                    <li><a href="tac-gia.html">Tác giả & Nhà xuất bản</a></li>
+                    <li><a href="blog.html">Góc độc giả & Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Chính sách đổi trả</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Phương thức vận chuyển</a></li>
+                    <li><a href="he-thong-nha-sach.html">Hệ thống nhà sách</a></li>
+                    <li><a href="tai-khoan.html">Tài khoản & Tích điểm</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Đăng Ký Nhận Bản Tin</h3>
+                <p>Nhận ngay voucher 15% cho đơn hàng đầu tiên và thông tin sách mới sớm nhất!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="btn-primary" style="padding:10px 18px;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 BookHaven. Tất cả các quyền được bảo lưu. Thiết kế & phát triển cho cộng đồng yêu sách.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
+            </div>
+            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

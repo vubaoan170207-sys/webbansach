@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tác Giả & Nhà Xuất Bản - BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="animated-bg"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234 (8:00 - 21:00)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="he-thong-nha-sach.html"><i class="fas fa-map-marker-alt"></i> Hệ thống nhà sách</a>
+                    <a href="doi-tra-van-chuyen.html"><i class="fas fa-exchange-alt"></i> Đổi trả & Vận chuyển</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-book-open"></i> BookHaven</h1>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo Tên sách, Tác giả, hoặc Mã ISBN...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-utils">
+                    <a href="tra-cuu-don-hang.html" class="util-item order-tracking">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Tra cứu<br>Đơn hàng</span>
+                    </a>
+                    <a href="tai-khoan.html" class="util-item account">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập<br>Đăng ký</span>
+                    </a>
+                    <a href="gio-hang.html" class="util-item cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="danh-muc.html">Danh mục sách <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-col">
+                                <h3>Theo thể loại</h3>
+                                <a href="danh-muc.html?cat=van-hoc">Văn học</a>
+                                <a href="danh-muc.html?cat=kinh-te">Kinh tế</a>
+                                <a href="danh-muc.html?cat=ky-nang-song">Kỹ năng sống</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo nguồn gốc</h3>
+                                <a href="danh-muc.html?origin=trong-nuoc">Sách trong nước</a>
+                                <a href="danh-muc.html?origin=ngoai-van">Sách ngoại văn</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo định dạng</h3>
+                                <a href="danh-muc.html?format=sach-giay">Sách giấy</a>
+                                <a href="danh-muc.html?format=ebook">E-book</a>
+                                <a href="danh-muc.html?format=audiobook">Audiobook</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="sach-moi.html">Sách mới</a></li>
+                    <li><a href="ban-chay.html">Bán chạy</a></li>
+                    <li><a href="khuyen-mai.html" class="highlight">Khuyến mãi / Flash Sale</a></li>
+                    <li><a href="tac-gia.html" class="active">Tác giả / NXB</a></li>
+                    <li><a href="blog.html">Góc độc giả (Blog)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER TRANG -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <div>
+                <h2><i class="fas fa-feather-alt"></i> Tác Giả Tiêu Biểu & Nhà Xuất Bản Uy Tín</h2>
+                <p>Khám phá cuộc đời, phong cách sáng tác và kho tàng tác phẩm của những cây bút xuất sắc</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / <span>Tác giả & NXB</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- TÁC GIẢ NỔI TIẾNG -->
+        <section>
+            <div class="section-header">
+                <h2>Cây Bút Nổi Bật Được Yêu Thích</h2>
+            </div>
+            <div class="author-grid">
+                <!-- Tác giả 1 -->
+                <div class="author-card">
+                    <div class="author-avatar"><i class="fas fa-user-tie"></i></div>
+                    <h3>Dale Carnegie</h3>
+                    <div class="author-specialty">Tâm lý & Nghệ thuật sống</div>
+                    <p class="author-desc">Nhà văn và nhà thuyết trình huyền thoại người Mỹ, tác giả của kiệt tác bất hủ "Đắc Nhân Tâm" và "Quẳng Gánh Lo Đi Và Vui Sống".</p>
+                    <a href="danh-muc.html?search=Dale%20Carnegie" class="btn-outline btn-sm">Xem 12 tác phẩm</a>
+                </div>
+
+                <!-- Tác giả 2 -->
+                <div class="author-card">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #38a169, #48bb78);"><i class="fas fa-book-reader"></i></div>
+                    <h3>Paulo Coelho</h3>
+                    <div class="author-specialty">Tiểu thuyết triết lý</div>
+                    <p class="author-desc">Nhà văn người Brazil với hơn 350 triệu bản in toàn cầu. Tác phẩm tiêu biểu: "Nhà Giả Kim", "Phù Thủy Phố Portobello", "Ngọn Núi Thứ Năm".</p>
+                    <a href="danh-muc.html?search=Paulo%20Coelho" class="btn-outline btn-sm">Xem 8 tác phẩm</a>
+                </div>
+
+                <!-- Tác giả 3 -->
+                <div class="author-card">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #ed8936, #dd6b20);"><i class="fas fa-pencil-alt"></i></div>
+                    <h3>Rosie Nguyễn</h3>
+                    <div class="author-specialty">Phát triển bản thân & Tuổi trẻ</div>
+                    <p class="author-desc">Cây bút trẻ truyền cảm hứng mạnh mẽ cho thế hệ Gen Z và Millennials qua "Tuổi Trẻ Đáng Giá Bao Nhiêu" và hành trình tự học suốt đời.</p>
+                    <a href="danh-muc.html?search=Rosie%20Nguy%E1%BB%85n" class="btn-outline btn-sm">Xem 5 tác phẩm</a>
+                </div>
+
+                <!-- Tác giả 4 -->
+                <div class="author-card">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #805ad5, #6b46c1);"><i class="fas fa-landmark"></i></div>
+                    <h3>Yuval Noah Harari</h3>
+                    <div class="author-specialty">Lịch sử học & Tương lai học</div>
+                    <p class="author-desc">Nhà sử học xuất sắc người Israel, làm rung chuyển tư duy nhân loại qua bộ ba "Sapiens", "Homo Deus" và "21 Bài Học Cho Thế Kỷ 21".</p>
+                    <a href="danh-muc.html?search=Yuval%20Noah%20Harari" class="btn-outline btn-sm">Xem 6 tác phẩm</a>
+                </div>
+
+                <!-- Tác giả 5 -->
+                <div class="author-card">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #e53e3e, #c53030);"><i class="fas fa-pen-nib"></i></div>
+                    <h3>Nguyễn Nhật Ánh</h3>
+                    <div class="author-specialty">Văn học thiếu nhi & Tuổi mới lớn</div>
+                    <p class="author-desc">Nhà văn gắn liền với ký ức thanh xuân của nhiều thế hệ người Việt. Tác phẩm nổi tiếng: "Mắt Biếc", "Cho Tôi Xin Một Vé Đi Tuổi Thơ", "Kính Vạn Hoa".</p>
+                    <a href="danh-muc.html?search=Nguy%E1%BB%85n%20Nh%E1%BA%ADt%20%C3%81nh" class="btn-outline btn-sm">Xem 35 tác phẩm</a>
+                </div>
+
+                <!-- Tác giả 6 -->
+                <div class="author-card">
+                    <div class="author-avatar" style="background: linear-gradient(135deg, #319795, #2c7a7b);"><i class="fas fa-magic"></i></div>
+                    <h3>Haruki Murakami</h3>
+                    <div class="author-specialty">Văn học hiện thực huyền ảo</div>
+                    <p class="author-desc">Tiểu thuyết gia hàng đầu Nhật Bản với lối viết đầy mê hoặc. Tác phẩm kinh điển: "Rừng Na Uy", "Biên Niên Sử Chim Vặn Dây Cót", "1Q84".</p>
+                    <a href="danh-muc.html?search=Haruki%20Murakami" class="btn-outline btn-sm">Xem 14 tác phẩm</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ĐỐI TÁC NHÀ XUẤT BẢN -->
+        <section style="margin-bottom: 50px;">
+            <div class="section-header">
+                <h2>Nhà Xuất Bản Đối Tác Đồng Hành</h2>
+            </div>
+            <div class="publisher-grid">
+                <div class="publisher-card">
+                    <div class="pub-logo-box"><i class="fas fa-building"></i></div>
+                    <strong style="color: var(--text-main);">NXB Trẻ</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-light);">Hơn 10.000 đầu sách</span>
+                </div>
+                <div class="publisher-card">
+                    <div class="pub-logo-box"><i class="fas fa-dragon"></i></div>
+                    <strong style="color: var(--text-main);">NXB Kim Đồng</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-light);">Vua sách thiếu nhi & Manga</span>
+                </div>
+                <div class="publisher-card">
+                    <div class="pub-logo-box"><i class="fas fa-feather"></i></div>
+                    <strong style="color: var(--text-main);">Nhã Nam</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-light);">Văn học tinh hoa thế giới</span>
+                </div>
+                <div class="publisher-card">
+                    <div class="pub-logo-box"><i class="fas fa-lightbulb"></i></div>
+                    <strong style="color: var(--text-main);">First News - Trí Việt</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-light);">Sách phát triển bản thân</span>
+                </div>
+                <div class="publisher-card">
+                    <div class="pub-logo-box"><i class="fas fa-university"></i></div>
+                    <strong style="color: var(--text-main);">NXB Tổng Hợp TP.HCM</strong>
+                    <span style="font-size: 0.8rem; color: var(--text-light);">Sách nghiên cứu & Xã hội</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-book-open"></i> BookHaven</h3>
+                <p>BookHaven là hệ thống nhà sách trực tuyến hiện đại hàng đầu, mang đến hàng chục nghìn đầu sách tinh hoa trong nước và quốc tế với trải nghiệm mua sắm tiện lợi, nhanh chóng.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Về BookHaven</h3>
+                <ul>
+                    <li><a href="danh-muc.html">Danh mục sách</a></li>
+                    <li><a href="sach-moi.html">Sách mới phát hành</a></li>
+                    <li><a href="ban-chay.html">Bán chạy nhất</a></li>
+                    <li><a href="tac-gia.html">Tác giả & Nhà xuất bản</a></li>
+                    <li><a href="blog.html">Góc độc giả & Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Chính sách đổi trả</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Phương thức vận chuyển</a></li>
+                    <li><a href="he-thong-nha-sach.html">Hệ thống nhà sách</a></li>
+                    <li><a href="tai-khoan.html">Tài khoản & Tích điểm</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Đăng Ký Nhận Bản Tin</h3>
+                <p>Nhận ngay voucher 15% cho đơn hàng đầu tiên và thông tin sách mới sớm nhất!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="btn-primary" style="padding:10px 18px;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 BookHaven. Tất cả các quyền được bảo lưu. Thiết kế & phát triển cho cộng đồng yêu sách.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
+            </div>
+            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

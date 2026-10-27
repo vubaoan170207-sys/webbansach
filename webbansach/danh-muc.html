@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục Sách - BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="animated-bg"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234 (8:00 - 21:00)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="he-thong-nha-sach.html"><i class="fas fa-map-marker-alt"></i> Hệ thống nhà sách</a>
+                    <a href="doi-tra-van-chuyen.html"><i class="fas fa-exchange-alt"></i> Đổi trả & Vận chuyển</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-book-open"></i> BookHaven</h1>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo Tên sách, Tác giả, hoặc Mã ISBN...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-utils">
+                    <a href="tra-cuu-don-hang.html" class="util-item order-tracking">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Tra cứu<br>Đơn hàng</span>
+                    </a>
+                    <a href="tai-khoan.html" class="util-item account">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập<br>Đăng ký</span>
+                    </a>
+                    <a href="gio-hang.html" class="util-item cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="danh-muc.html" class="active">Danh mục sách <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-col">
+                                <h3>Theo thể loại</h3>
+                                <a href="danh-muc.html?cat=van-hoc">Văn học</a>
+                                <a href="danh-muc.html?cat=kinh-te">Kinh tế</a>
+                                <a href="danh-muc.html?cat=ky-nang-song">Kỹ năng sống</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo nguồn gốc</h3>
+                                <a href="danh-muc.html?origin=trong-nuoc">Sách trong nước</a>
+                                <a href="danh-muc.html?origin=ngoai-van">Sách ngoại văn</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo định dạng</h3>
+                                <a href="danh-muc.html?format=sach-giay">Sách giấy</a>
+                                <a href="danh-muc.html?format=ebook">E-book</a>
+                                <a href="danh-muc.html?format=audiobook">Audiobook</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="sach-moi.html">Sách mới</a></li>
+                    <li><a href="ban-chay.html">Bán chạy</a></li>
+                    <li><a href="khuyen-mai.html" class="highlight">Khuyến mãi / Flash Sale</a></li>
+                    <li><a href="tac-gia.html">Tác giả / NXB</a></li>
+                    <li><a href="blog.html">Góc độc giả (Blog)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER TRANG -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <div>
+                <h2 id="catalog-title"><i class="fas fa-layer-group"></i> Tất Cả Danh Mục Sách</h2>
+                <p>Khám phá kho tàng tri thức với hơn 20.000 đầu sách chọn lọc phong phú</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / <span>Danh mục sách</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="container">
+        <div class="catalog-layout">
+            <!-- BỘ LỌC SIDEBAR -->
+            <aside class="filter-sidebar">
+                <div class="filter-title">
+                    <i class="fas fa-filter"></i> Bộ Lọc Tìm Kiếm
+                </div>
+
+                <div class="filter-group">
+                    <h4>Thể Loại</h4>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="van-hoc">
+                        <span>Văn học cổ điển & Hiện đại</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="kinh-te">
+                        <span>Kinh tế & Đầu tư</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="ky-nang-song">
+                        <span>Tâm lý & Kỹ năng sống</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="khoa-hoc">
+                        <span>Khoa học viễn tưởng</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="thieu-nhi">
+                        <span>Thiếu nhi & Tranh truyện</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Định Dạng Sách</h4>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-format" value="sach-giay">
+                        <span>Sách in bìa mềm / cứng</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-format" value="ebook">
+                        <span>E-book bản quyền</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-format" value="audiobook">
+                        <span>Sách nói (Audiobook)</span>
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Khoảng Giá</h4>
+                    <label class="filter-option">
+                        <input type="radio" name="price-filter" checked>
+                        <span>Tất cả mức giá</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price-filter">
+                        <span>Dưới 100.000đ</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price-filter">
+                        <span>100.000đ - 250.000đ</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price-filter">
+                        <span>Trên 250.000đ</span>
+                    </label>
+                </div>
+            </aside>
+
+            <!-- LƯỚI SẢN PHẨM -->
+            <section class="catalog-main">
+                <div class="catalog-toolbar">
+                    <span id="books-count" style="font-weight: 600; color: #4a5568;">Hiển thị 8 cuốn sách</span>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <label for="sort-books" style="font-size: 0.9rem; color: #718096;">Sắp xếp theo:</label>
+                        <select id="sort-books" class="sort-select">
+                            <option value="default">Phổ biến nhất</option>
+                            <option value="price-asc">Giá: Thấp đến Cao</option>
+                            <option value="price-desc">Giá: Cao đến Thấp</option>
+                            <option value="rating">Đánh giá cao nhất</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="book-grid" id="catalog-books-grid">
+                    <!-- Sách 1 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="75000" data-rating="4.9">
+                        <div class="book-cover">
+                            📖
+                            <span class="discount-tag">-25%</span>
+                        </div>
+                        <h4>Đắc Nhân Tâm</h4>
+                        <p class="author">Dale Carnegie</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 1.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">75.000đ</span>
+                            <span class="old-price">100.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Đắc Nhân Tâm', 75000, '📖', 'Dale Carnegie')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 2 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="65000" data-rating="4.8">
+                        <div class="book-cover">
+                            📘
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Nhà Giả Kim (The Alchemist)</h4>
+                        <p class="author">Paulo Coelho</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 980)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">65.000đ</span>
+                            <span class="old-price">85.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nhà Giả Kim', 65000, '📘', 'Paulo Coelho')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 3 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="89000" data-rating="4.7">
+                        <div class="book-cover">
+                            📗
+                            <span class="discount-tag">-26%</span>
+                        </div>
+                        <h4>Nghĩ Giàu Làm Giàu</h4>
+                        <p class="author">Napoleon Hill</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(4.7 - 750)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">89.000đ</span>
+                            <span class="old-price">120.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nghĩ Giàu Làm Giàu', 89000, '📗', 'Napoleon Hill')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 4 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="150000" data-rating="4.9">
+                        <div class="book-cover">
+                            📙
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Sapiens: Lược Sử Loài Người</h4>
+                        <p class="author">Yuval Noah Harari</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 1.5k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">150.000đ</span>
+                            <span class="old-price">190.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Sapiens: Lược Sử Loài Người', 150000, '📙', 'Yuval Noah Harari')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 5 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="ebook" data-price="45000" data-rating="4.6">
+                        <div class="book-cover">
+                            📱
+                            <span class="discount-tag">-40%</span>
+                        </div>
+                        <h4>Tư Duy Nhanh Và Chậm (E-Book)</h4>
+                        <p class="author">Daniel Kahneman</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.6 - 430)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">45.000đ</span>
+                            <span class="old-price">75.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Tư Duy Nhanh Và Chậm (E-Book)', 45000, '📱', 'Daniel Kahneman')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 6 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="190000" data-rating="4.9">
+                        <div class="book-cover">
+                            📔
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Dune - Xứ Cát (Tập 1)</h4>
+                        <p class="author">Frank Herbert</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 890)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">190.000đ</span>
+                            <span class="old-price">250.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Dune - Xứ Cát', 190000, '📔', 'Frank Herbert')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 7 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="audiobook" data-price="99000" data-rating="4.8">
+                        <div class="book-cover">
+                            🎧
+                            <span class="discount-tag">-30%</span>
+                        </div>
+                        <h4>Tâm Lý Học Về Tiền (Audiobook)</h4>
+                        <p class="author">Morgan Housel</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 620)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">99.000đ</span>
+                            <span class="old-price">140.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Tâm Lý Học Về Tiền (Audiobook)', 99000, '🎧', 'Morgan Housel')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+
+                    <!-- Sách 8 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="105000" data-rating="4.7">
+                        <div class="book-cover">
+                            📕
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <h4>Cây Cam Ngọt Của Tôi</h4>
+                        <p class="author">José Mauro de Vasconcelos</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 2.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">105.000đ</span>
+                            <span class="old-price">130.000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Cây Cam Ngọt Của Tôi', 105000, '📕', 'José Mauro de Vasconcelos')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-book-open"></i> BookHaven</h3>
+                <p>BookHaven là hệ thống nhà sách trực tuyến hiện đại hàng đầu, mang đến hàng chục nghìn đầu sách tinh hoa trong nước và quốc tế với trải nghiệm mua sắm tiện lợi, nhanh chóng.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Về BookHaven</h3>
+                <ul>
+                    <li><a href="danh-muc.html">Danh mục sách</a></li>
+                    <li><a href="sach-moi.html">Sách mới phát hành</a></li>
+                    <li><a href="ban-chay.html">Bán chạy nhất</a></li>
+                    <li><a href="tac-gia.html">Tác giả & Nhà xuất bản</a></li>
+                    <li><a href="blog.html">Góc độc giả & Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Chính sách đổi trả</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Phương thức vận chuyển</a></li>
+                    <li><a href="he-thong-nha-sach.html">Hệ thống nhà sách</a></li>
+                    <li><a href="tai-khoan.html">Tài khoản & Tích điểm</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Đăng Ký Nhận Bản Tin</h3>
+                <p>Nhận ngay voucher 15% cho đơn hàng đầu tiên và thông tin sách mới sớm nhất!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="btn-primary" style="padding:10px 18px;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 BookHaven. Tất cả các quyền được bảo lưu. Thiết kế & phát triển cho cộng đồng yêu sách.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
+            </div>
+            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

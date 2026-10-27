@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Nhà Sách - BookHaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="animated-bg"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234 (8:00 - 21:00)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="he-thong-nha-sach.html" style="color: var(--secondary-color);"><i class="fas fa-map-marker-alt"></i> Hệ thống nhà sách</a>
+                    <a href="doi-tra-van-chuyen.html"><i class="fas fa-exchange-alt"></i> Đổi trả & Vận chuyển</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-book-open"></i> BookHaven</h1>
+                    </a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo Tên sách, Tác giả, hoặc Mã ISBN...">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="header-utils">
+                    <a href="tra-cuu-don-hang.html" class="util-item order-tracking">
+                        <i class="fas fa-truck-fast"></i>
+                        <span>Tra cứu<br>Đơn hàng</span>
+                    </a>
+                    <a href="tai-khoan.html" class="util-item account">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập<br>Đăng ký</span>
+                    </a>
+                    <a href="gio-hang.html" class="util-item cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container nav-content">
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="dropdown">
+                        <a href="danh-muc.html">Danh mục sách <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-col">
+                                <h3>Theo thể loại</h3>
+                                <a href="danh-muc.html?cat=van-hoc">Văn học</a>
+                                <a href="danh-muc.html?cat=kinh-te">Kinh tế</a>
+                                <a href="danh-muc.html?cat=ky-nang-song">Kỹ năng sống</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo nguồn gốc</h3>
+                                <a href="danh-muc.html?origin=trong-nuoc">Sách trong nước</a>
+                                <a href="danh-muc.html?origin=ngoai-van">Sách ngoại văn</a>
+                            </div>
+                            <div class="dropdown-col">
+                                <h3>Theo định dạng</h3>
+                                <a href="danh-muc.html?format=sach-giay">Sách giấy</a>
+                                <a href="danh-muc.html?format=ebook">E-book</a>
+                                <a href="danh-muc.html?format=audiobook">Audiobook</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="sach-moi.html">Sách mới</a></li>
+                    <li><a href="ban-chay.html">Bán chạy</a></li>
+                    <li><a href="khuyen-mai.html" class="highlight">Khuyến mãi / Flash Sale</a></li>
+                    <li><a href="tac-gia.html">Tác giả / NXB</a></li>
+                    <li><a href="blog.html">Góc độc giả (Blog)</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER TRANG -->
+    <section class="page-banner">
+        <div class="container page-banner-content">
+            <div>
+                <h2><i class="fas fa-map-marked-alt"></i> Hệ Thống Nhà Sách BookHaven Toàn Quốc</h2>
+                <p>Không gian đọc sách hiện đại, ấm cúng và đầy ắp cảm hứng sáng tạo</p>
+            </div>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a> / <span>Hệ thống nhà sách</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- BỘ LỌC KHU VỰC THÀNH PHỐ -->
+        <div style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap;">
+            <button class="btn-secondary city-tab-btn active" onclick="filterStores('all')">Tất cả chi nhánh (5)</button>
+            <button class="btn-secondary city-tab-btn" onclick="filterStores('hanoi')">Hà Nội (2)</button>
+            <button class="btn-secondary city-tab-btn" onclick="filterStores('hcm')">TP. Hồ Chí Minh (2)</button>
+            <button class="btn-secondary city-tab-btn" onclick="filterStores('danang')">Đà Nẵng (1)</button>
+        </div>
+
+        <!-- DANH SÁCH CÁC CỬA HÀNG -->
+        <div class="store-grid">
+            <!-- Chi nhánh 1: Hà Nội -->
+            <div class="store-card" data-city="hanoi">
+                <span class="badge-pill badge-blue" style="float: right;">Flagship Store</span>
+                <h3><i class="fas fa-store"></i> BookHaven Tràng Tiền Plaza</h3>
+                <div class="store-info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Tầng 3, Tràng Tiền Plaza, 24 Hai Bà Trưng, Hoàn Kiếm, Hà Nội</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Giờ mở cửa: 08:30 - 22:00 (Cả ngày Lễ & Chủ Nhật)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Điện thoại: (024) 3825 6789</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>Tiện ích: Quầy Cafe đọc sách, Bãi đỗ xe ô tô, Wifi tốc độ cao</span>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="btn-primary btn-sm" onclick="showToast('Đang gọi chi nhánh Tràng Tiền: 02438256789')">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </button>
+                    <button class="btn-secondary btn-sm" onclick="showToast('Đã mở bản đồ chỉ đường đến Tràng Tiền Plaza')">
+                        <i class="fas fa-directions"></i> Chỉ đường
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chi nhánh 2: Hà Nội -->
+            <div class="store-card" data-city="hanoi">
+                <span class="badge-pill badge-green" style="float: right;">Không gian mở</span>
+                <h3><i class="fas fa-store"></i> BookHaven Cầu Giấy</h3>
+                <div class="store-info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Số 182 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Giờ mở cửa: 08:00 - 21:30 (Mỗi ngày)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Điện thoại: (024) 3754 1122</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-laptop"></i>
+                    <span>Tiện ích: Khu vực học tập yên tĩnh, Workshop cuối tuần</span>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="btn-primary btn-sm" onclick="showToast('Đang gọi chi nhánh Cầu Giấy: 02437541122')">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </button>
+                    <button class="btn-secondary btn-sm" onclick="showToast('Đã mở bản đồ chỉ đường đến 182 Xuân Thủy')">
+                        <i class="fas fa-directions"></i> Chỉ đường
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chi nhánh 3: TP.HCM -->
+            <div class="store-card" data-city="hcm">
+                <span class="badge-pill badge-blue" style="float: right;">Flagship Store</span>
+                <h3><i class="fas fa-store"></i> BookHaven Phố Đi Bộ Nguyễn Huệ</h3>
+                <div class="store-info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Giờ mở cửa: 08:30 - 22:30 (Mở cửa xuyên suốt)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Điện thoại: (028) 3822 9988</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-coffee"></i>
+                    <span>Tiện ích: Book Cafe tầng thượng view phố đi bộ, Sách ngoại văn phong phú</span>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="btn-primary btn-sm" onclick="showToast('Đang gọi chi nhánh Nguyễn Huệ: 02838229988')">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </button>
+                    <button class="btn-secondary btn-sm" onclick="showToast('Đã mở bản đồ chỉ đường đến 68 Nguyễn Huệ')">
+                        <i class="fas fa-directions"></i> Chỉ đường
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chi nhánh 4: TP.HCM -->
+            <div class="store-card" data-city="hcm">
+                <span class="badge-pill badge-orange" style="float: right;">Trung tâm Manga & Thiếu nhi</span>
+                <h3><i class="fas fa-store"></i> BookHaven GigaMall Thủ Đức</h3>
+                <div class="store-info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Tầng 4, TTTM GigaMall, 240-242 Phạm Văn Đồng, TP. Thủ Đức, TP.HCM</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Giờ mở cửa: 09:30 - 22:00 (Mỗi ngày)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Điện thoại: (028) 3999 5566</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Tiện ích: Khu trải nghiệm sách tương tác cho trẻ em, Khu Boardgame</span>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="btn-primary btn-sm" onclick="showToast('Đang gọi chi nhánh GigaMall: 02839995566')">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </button>
+                    <button class="btn-secondary btn-sm" onclick="showToast('Đã mở bản đồ chỉ đường đến GigaMall Thủ Đức')">
+                        <i class="fas fa-directions"></i> Chỉ đường
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chi nhánh 5: Đà Nẵng -->
+            <div class="store-card" data-city="danang">
+                <span class="badge-pill badge-green" style="float: right;">Chi nhánh Miền Trung</span>
+                <h3><i class="fas fa-store"></i> BookHaven Bạch Đằng - Đà Nẵng</h3>
+                <div class="store-info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>115 Bạch Đằng, Quận Hải Châu, TP. Đà Nẵng (Bên bờ sông Hàn)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Giờ mở cửa: 08:00 - 21:30 (Mỗi ngày)</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Điện thoại: (0236) 3899 456</span>
+                </div>
+                <div class="store-info-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Tiện ích: Không gian đọc view sông Hàn cực chill, Trưng bày sách văn hoá miền Trung</span>
+                </div>
+                <div style="margin-top: 15px; display: flex; gap: 10px;">
+                    <button class="btn-primary btn-sm" onclick="showToast('Đang gọi chi nhánh Đà Nẵng: 02363899456')">
+                        <i class="fas fa-phone"></i> Gọi ngay
+                    </button>
+                    <button class="btn-secondary btn-sm" onclick="showToast('Đã mở bản đồ chỉ đường đến 115 Bạch Đằng')">
+                        <i class="fas fa-directions"></i> Chỉ đường
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-book-open"></i> BookHaven</h3>
+                <p>BookHaven là hệ thống nhà sách trực tuyến hiện đại hàng đầu, mang đến hàng chục nghìn đầu sách tinh hoa trong nước và quốc tế với trải nghiệm mua sắm tiện lợi, nhanh chóng.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Về BookHaven</h3>
+                <ul>
+                    <li><a href="danh-muc.html">Danh mục sách</a></li>
+                    <li><a href="sach-moi.html">Sách mới phát hành</a></li>
+                    <li><a href="ban-chay.html">Bán chạy nhất</a></li>
+                    <li><a href="tac-gia.html">Tác giả & Nhà xuất bản</a></li>
+                    <li><a href="blog.html">Góc độc giả & Review</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ Trợ Khách Hàng</h3>
+                <ul>
+                    <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Chính sách đổi trả</a></li>
+                    <li><a href="doi-tra-van-chuyen.html">Phương thức vận chuyển</a></li>
+                    <li><a href="he-thong-nha-sach.html">Hệ thống nhà sách</a></li>
+                    <li><a href="tai-khoan.html">Tài khoản & Tích điểm</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Đăng Ký Nhận Bản Tin</h3>
+                <p>Nhận ngay voucher 15% cho đơn hàng đầu tiên và thông tin sách mới sớm nhất!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="btn-primary" style="padding:10px 18px;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 BookHaven. Tất cả các quyền được bảo lưu. Thiết kế & phát triển cho cộng đồng yêu sách.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
+            </div>
+            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
+        </div>
+        <div class="chat-body" id="chat-body"></div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
