@@ -120,27 +120,37 @@
                     <i class="fas fa-filter"></i> Bộ Lọc Tìm Kiếm
                 </div>
 
-                <div class="filter-group">
+                                <div class="filter-group">
                     <h4>Thể Loại</h4>
                     <label class="filter-option">
                         <input type="checkbox" class="filter-category" value="van-hoc">
-                        <span>Văn học cổ điển & Hiện đại</span>
+                        <span>Văn học & Tiểu thuyết</span>
+                        <span class="category-count">(10)</span>
                     </label>
                     <label class="filter-option">
                         <input type="checkbox" class="filter-category" value="kinh-te">
                         <span>Kinh tế & Đầu tư</span>
+                        <span class="category-count">(10)</span>
                     </label>
                     <label class="filter-option">
                         <input type="checkbox" class="filter-category" value="ky-nang-song">
                         <span>Tâm lý & Kỹ năng sống</span>
+                        <span class="category-count">(10)</span>
                     </label>
                     <label class="filter-option">
                         <input type="checkbox" class="filter-category" value="khoa-hoc">
-                        <span>Khoa học viễn tưởng</span>
+                        <span>Khoa học & Lịch sử</span>
+                        <span class="category-count">(10)</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" class="filter-category" value="trinh-tham">
+                        <span>Trinh thám & Bí ẩn</span>
+                        <span class="category-count">(5)</span>
                     </label>
                     <label class="filter-option">
                         <input type="checkbox" class="filter-category" value="thieu-nhi">
-                        <span>Thiếu nhi & Tranh truyện</span>
+                        <span>Thiếu nhi & Kỳ ảo</span>
+                        <span class="category-count">(5)</span>
                     </label>
                 </div>
 
@@ -184,7 +194,7 @@
             <!-- LƯỚI SẢN PHẨM -->
             <section class="catalog-main">
                 <div class="catalog-toolbar">
-                    <span id="books-count" style="font-weight: 600; color: #4a5568;">Hiển thị 8 cuốn sách</span>
+                    <span id="books-count" style="font-weight: 600; color: #4a5568;">Hiển thị 50 cuốn sách chọn lọc</span>
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <label for="sort-books" style="font-size: 0.9rem; color: #718096;">Sắp xếp theo:</label>
                         <select id="sort-books" class="sort-select">
@@ -198,169 +208,1002 @@
 
                 <div class="book-grid" id="catalog-books-grid">
                     <!-- Sách 1 -->
-                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="75000" data-rating="4.9">
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="65000" data-rating="4.9">
                         <div class="book-cover">
-                            📖
+                            <img src="images/book_01.jpg" alt="Nhà Giả Kim" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Nhà Giả Kim</h4>
+                        <p class="author">Paulo Coelho</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 2.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">65,000đ</span>
+                            <span class="old-price">85,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nhà Giả Kim', 65000, 'images/book_01.jpg', 'Paulo Coelho')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 2 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="55000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_02.jpg" alt="Hoàng Tử Bé" loading="lazy">
+                            <span class="discount-tag">-27%</span>
+                        </div>
+                        <h4>Hoàng Tử Bé</h4>
+                        <p class="author">Antoine de Saint-Exupéry</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 3.7k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">55,000đ</span>
+                            <span class="old-price">75,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Hoàng Tử Bé', 55000, 'images/book_02.jpg', 'Antoine de Saint-Exupéry')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 3 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="95000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_03.jpg" alt="1984" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>1984</h4>
+                        <p class="author">George Orwell</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 5.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">95,000đ</span>
+                            <span class="old-price">120,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('1984', 95000, 'images/book_03.jpg', 'George Orwell')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 4 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="110000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_04.jpg" alt="Giết Con Chim Nhại" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Giết Con Chim Nhại</h4>
+                        <p class="author">Harper Lee</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 6.5k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">110,000đ</span>
+                            <span class="old-price">140,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Giết Con Chim Nhại', 110000, 'images/book_04.jpg', 'Harper Lee')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 5 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="85000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_05.jpg" alt="Đại Gia Gatsby" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Đại Gia Gatsby</h4>
+                        <p class="author">F. Scott Fitzgerald</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 7.8k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">85,000đ</span>
+                            <span class="old-price">110,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Đại Gia Gatsby', 85000, 'images/book_05.jpg', 'F. Scott Fitzgerald')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 6 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="99000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_06.jpg" alt="Kiêu Hãnh Và Định Kiến" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Kiêu Hãnh Và Định Kiến</h4>
+                        <p class="author">Jane Austen</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 9.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">99,000đ</span>
+                            <span class="old-price">130,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Kiêu Hãnh Và Định Kiến', 99000, 'images/book_06.jpg', 'Jane Austen')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 7 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="89000" data-rating="4.6">
+                        <div class="book-cover">
+                            <img src="images/book_07.jpg" alt="Bắt Trẻ Đồng Xanh" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Bắt Trẻ Đồng Xanh</h4>
+                        <p class="author">J.D. Salinger</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.6 - 1.6k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">89,000đ</span>
+                            <span class="old-price">115,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Bắt Trẻ Đồng Xanh', 89000, 'images/book_07.jpg', 'J.D. Salinger')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 8 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="145000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_08.jpg" alt="Tội Ác Và Trừng Phạt" loading="lazy">
+                            <span class="discount-tag">-19%</span>
+                        </div>
+                        <h4>Tội Ác Và Trừng Phạt</h4>
+                        <p class="author">Fyodor Dostoevsky</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 3.0k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">145,000đ</span>
+                            <span class="old-price">180,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Tội Ác Và Trừng Phạt', 145000, 'images/book_08.jpg', 'Fyodor Dostoevsky')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 9 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="185000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_09.jpg" alt="Những Người Khốn Khổ" loading="lazy">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <h4>Những Người Khốn Khổ</h4>
+                        <p class="author">Victor Hugo</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 4.3k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">185,000đ</span>
+                            <span class="old-price">230,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Những Người Khốn Khổ', 185000, 'images/book_09.jpg', 'Victor Hugo')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 10 -->
+                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="135000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_10.jpg" alt="Trăm Năm Cô Đơn" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Trăm Năm Cô Đơn</h4>
+                        <p class="author">Gabriel García Márquez</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 5.7k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">135,000đ</span>
+                            <span class="old-price">170,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Trăm Năm Cô Đơn', 135000, 'images/book_10.jpg', 'Gabriel García Márquez')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 11 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="89000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_11.jpg" alt="Nghĩ Giàu Làm Giàu" loading="lazy">
+                            <span class="discount-tag">-26%</span>
+                        </div>
+                        <h4>Nghĩ Giàu Làm Giàu</h4>
+                        <p class="author">Napoleon Hill</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 7.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">89,000đ</span>
+                            <span class="old-price">120,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nghĩ Giàu Làm Giàu', 89000, 'images/book_11.jpg', 'Napoleon Hill')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 12 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="95000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_12.jpg" alt="Cha Giàu Cha Nghèo" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Cha Giàu Cha Nghèo</h4>
+                        <p class="author">Robert Kiyosaki</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 8.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">95,000đ</span>
+                            <span class="old-price">125,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Cha Giàu Cha Nghèo', 95000, 'images/book_12.jpg', 'Robert Kiyosaki')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 13 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="175000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_13.jpg" alt="Nhà Đầu Tư Thông Minh" loading="lazy">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <h4>Nhà Đầu Tư Thông Minh</h4>
+                        <p class="author">Benjamin Graham</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 9.8k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">175,000đ</span>
+                            <span class="old-price">220,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nhà Đầu Tư Thông Minh', 175000, 'images/book_13.jpg', 'Benjamin Graham')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 14 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="audiobook" data-price="99000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_14.jpg" alt="Tâm Lý Học Về Tiền" loading="lazy">
+                            <span class="discount-tag">-29%</span>
+                        </div>
+                        <h4>Tâm Lý Học Về Tiền</h4>
+                        <p class="author">Morgan Housel</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 2.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">99,000đ</span>
+                            <span class="old-price">140,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Tâm Lý Học Về Tiền', 99000, 'images/book_14.jpg', 'Morgan Housel')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 15 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="ebook" data-price="105000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_15.jpg" alt="Không Đến Một (Zero to One)" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Không Đến Một (Zero to One)</h4>
+                        <p class="author">Peter Thiel</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 3.5k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">105,000đ</span>
+                            <span class="old-price">135,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Không Đến Một (Zero to One)', 105000, 'images/book_15.jpg', 'Peter Thiel')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 16 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="125000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_16.jpg" alt="Từ Tốt Đến Vĩ Đại" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Từ Tốt Đến Vĩ Đại</h4>
+                        <p class="author">Jim Collins</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 4.9k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">125,000đ</span>
+                            <span class="old-price">160,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Từ Tốt Đến Vĩ Đại', 125000, 'images/book_16.jpg', 'Jim Collins')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 17 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="ebook" data-price="115000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_17.jpg" alt="Khởi Nghiệp Tinh Gọn" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Khởi Nghiệp Tinh Gọn</h4>
+                        <p class="author">Eric Ries</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 6.3k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">115,000đ</span>
+                            <span class="old-price">150,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Khởi Nghiệp Tinh Gọn', 115000, 'images/book_17.jpg', 'Eric Ries')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 18 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="149000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_18.jpg" alt="Gã Nghiện Giày (Shoe Dog)" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Gã Nghiện Giày (Shoe Dog)</h4>
+                        <p class="author">Phil Knight</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 7.7k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">149,000đ</span>
+                            <span class="old-price">190,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Gã Nghiện Giày (Shoe Dog)', 149000, 'images/book_18.jpg', 'Phil Knight')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 19 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="220000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_19.jpg" alt="Nguyên Tắc Để Thành Công" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Nguyên Tắc Để Thành Công</h4>
+                        <p class="author">Ray Dalio</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 9.0k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">220,000đ</span>
+                            <span class="old-price">280,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nguyên Tắc Để Thành Công', 220000, 'images/book_19.jpg', 'Ray Dalio')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 20 -->
+                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="108000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_20.jpg" alt="Kinh Tế Học Hài Hước" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Kinh Tế Học Hài Hước</h4>
+                        <p class="author">Steven D. Levitt</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 1.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">108,000đ</span>
+                            <span class="old-price">138,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Kinh Tế Học Hài Hước', 108000, 'images/book_20.jpg', 'Steven D. Levitt')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 21 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="75000" data-rating="5.0">
+                        <div class="book-cover">
+                            <img src="images/book_21.jpg" alt="Đắc Nhân Tâm" loading="lazy">
                             <span class="discount-tag">-25%</span>
                         </div>
                         <h4>Đắc Nhân Tâm</h4>
                         <p class="author">Dale Carnegie</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.9 - 1.2k)</span>
+                            <span>(5.0 - 2.8k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">75.000đ</span>
-                            <span class="old-price">100.000đ</span>
+                            <span class="price">75,000đ</span>
+                            <span class="old-price">100,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Đắc Nhân Tâm', 75000, '📖', 'Dale Carnegie')">
+                        <button class="btn-add-cart" onclick="addToCart('Đắc Nhân Tâm', 75000, 'images/book_21.jpg', 'Dale Carnegie')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 2 -->
-                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="65000" data-rating="4.8">
+                    <!-- Sách 22 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="135000" data-rating="5.0">
                         <div class="book-cover">
-                            📘
-                            <span class="discount-tag">-24%</span>
+                            <img src="images/book_22.jpg" alt="Thay Đổi Tí Hon (Atomic Habits)" loading="lazy">
+                            <span class="discount-tag">-23%</span>
                         </div>
-                        <h4>Nhà Giả Kim (The Alchemist)</h4>
-                        <p class="author">Paulo Coelho</p>
+                        <h4>Thay Đổi Tí Hon (Atomic Habits)</h4>
+                        <p class="author">James Clear</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.8 - 980)</span>
+                            <span>(5.0 - 4.1k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">65.000đ</span>
-                            <span class="old-price">85.000đ</span>
+                            <span class="price">135,000đ</span>
+                            <span class="old-price">175,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Nhà Giả Kim', 65000, '📘', 'Paulo Coelho')">
+                        <button class="btn-add-cart" onclick="addToCart('Thay Đổi Tí Hon (Atomic Habits)', 135000, 'images/book_22.jpg', 'James Clear')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 3 -->
-                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="sach-giay" data-price="89000" data-rating="4.7">
+                    <!-- Sách 23 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="128000" data-rating="4.9">
                         <div class="book-cover">
-                            📗
-                            <span class="discount-tag">-26%</span>
+                            <img src="images/book_23.jpg" alt="7 Thói Quen Của Người Thành Đạt" loading="lazy">
+                            <span class="discount-tag">-22%</span>
                         </div>
-                        <h4>Nghĩ Giàu Làm Giàu</h4>
-                        <p class="author">Napoleon Hill</p>
+                        <h4>7 Thói Quen Của Người Thành Đạt</h4>
+                        <p class="author">Stephen R. Covey</p>
                         <div class="book-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>(4.7 - 750)</span>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 5.5k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">89.000đ</span>
-                            <span class="old-price">120.000đ</span>
+                            <span class="price">128,000đ</span>
+                            <span class="old-price">165,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Nghĩ Giàu Làm Giàu', 89000, '📗', 'Napoleon Hill')">
+                        <button class="btn-add-cart" onclick="addToCart('7 Thói Quen Của Người Thành Đạt', 128000, 'images/book_23.jpg', 'Stephen R. Covey')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 4 -->
-                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="150000" data-rating="4.9">
+                    <!-- Sách 24 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="ebook" data-price="155000" data-rating="4.8">
                         <div class="book-cover">
-                            📙
+                            <img src="images/book_24.jpg" alt="Tư Duy Nhanh Và Chậm" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Tư Duy Nhanh Và Chậm</h4>
+                        <p class="author">Daniel Kahneman</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 6.9k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">155,000đ</span>
+                            <span class="old-price">199,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Tư Duy Nhanh Và Chậm', 155000, 'images/book_24.jpg', 'Daniel Kahneman')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 25 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="82000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_25.jpg" alt="Đi Tìm Lẽ Sống" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Đi Tìm Lẽ Sống</h4>
+                        <p class="author">Viktor E. Frankl</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 8.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">82,000đ</span>
+                            <span class="old-price">105,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Đi Tìm Lẽ Sống', 82000, 'images/book_25.jpg', 'Viktor E. Frankl')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 26 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="audiobook" data-price="95000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_26.jpg" alt="Sức Mạnh Của Hiện Tại" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Sức Mạnh Của Hiện Tại</h4>
+                        <p class="author">Eckhart Tolle</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 9.6k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">95,000đ</span>
+                            <span class="old-price">125,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Sức Mạnh Của Hiện Tại', 95000, 'images/book_26.jpg', 'Eckhart Tolle')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 27 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="88000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_27.jpg" alt="Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm</h4>
+                        <p class="author">Mark Manson</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 2.0k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">88,000đ</span>
+                            <span class="old-price">115,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm', 88000, 'images/book_27.jpg', 'Mark Manson')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 28 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="168000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_28.jpg" alt="48 Nguyên Tắc Chủ Chốt Của Quyền Lực" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>48 Nguyên Tắc Chủ Chốt Của Quyền Lực</h4>
+                        <p class="author">Robert Greene</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 3.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">168,000đ</span>
+                            <span class="old-price">215,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('48 Nguyên Tắc Chủ Chốt Của Quyền Lực', 168000, 'images/book_28.jpg', 'Robert Greene')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 29 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="92000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_29.jpg" alt="Dám Bị Ghét" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Dám Bị Ghét</h4>
+                        <p class="author">Ichiro Kishimi</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 4.7k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">92,000đ</span>
+                            <span class="old-price">120,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Dám Bị Ghét', 92000, 'images/book_29.jpg', 'Ichiro Kishimi')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 30 -->
+                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="sach-giay" data-price="118000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_30.jpg" alt="Dám Dẫn Đầu (Daring Greatly)" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Dám Dẫn Đầu (Daring Greatly)</h4>
+                        <p class="author">Brené Brown</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 6.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">118,000đ</span>
+                            <span class="old-price">150,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Dám Dẫn Đầu (Daring Greatly)', 118000, 'images/book_30.jpg', 'Brené Brown')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 31 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="150000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_31.jpg" alt="Sapiens: Lược Sử Loài Người" loading="lazy">
                             <span class="discount-tag">-21%</span>
                         </div>
                         <h4>Sapiens: Lược Sử Loài Người</h4>
                         <p class="author">Yuval Noah Harari</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.9 - 1.5k)</span>
+                            <span>(4.9 - 7.5k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">150.000đ</span>
-                            <span class="old-price">190.000đ</span>
+                            <span class="price">150,000đ</span>
+                            <span class="old-price">190,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Sapiens: Lược Sử Loài Người', 150000, '📙', 'Yuval Noah Harari')">
+                        <button class="btn-add-cart" onclick="addToCart('Sapiens: Lược Sử Loài Người', 150000, 'images/book_31.jpg', 'Yuval Noah Harari')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 5 -->
-                    <div class="book-card catalog-book-item" data-cat="ky-nang-song" data-format="ebook" data-price="45000" data-rating="4.6">
+                    <!-- Sách 32 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="155000" data-rating="4.8">
                         <div class="book-cover">
-                            📱
-                            <span class="discount-tag">-40%</span>
+                            <img src="images/book_32.jpg" alt="Homo Deus: Lược Sử Tương Lai" loading="lazy">
+                            <span class="discount-tag">-21%</span>
                         </div>
-                        <h4>Tư Duy Nhanh Và Chậm (E-Book)</h4>
-                        <p class="author">Daniel Kahneman</p>
+                        <h4>Homo Deus: Lược Sử Tương Lai</h4>
+                        <p class="author">Yuval Noah Harari</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.6 - 430)</span>
+                            <span>(4.8 - 8.8k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">45.000đ</span>
-                            <span class="old-price">75.000đ</span>
+                            <span class="price">155,000đ</span>
+                            <span class="old-price">195,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Tư Duy Nhanh Và Chậm (E-Book)', 45000, '📱', 'Daniel Kahneman')">
+                        <button class="btn-add-cart" onclick="addToCart('Homo Deus: Lược Sử Tương Lai', 155000, 'images/book_32.jpg', 'Yuval Noah Harari')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 6 -->
+                    <!-- Sách 33 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="145000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_33.jpg" alt="21 Bài Học Cho Thế Kỷ 21" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>21 Bài Học Cho Thế Kỷ 21</h4>
+                        <p class="author">Yuval Noah Harari</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 1.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">145,000đ</span>
+                            <span class="old-price">185,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('21 Bài Học Cho Thế Kỷ 21', 145000, 'images/book_33.jpg', 'Yuval Noah Harari')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 34 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="98000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_34.jpg" alt="Lược Sử Thời Gian" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Lược Sử Thời Gian</h4>
+                        <p class="author">Stephen Hawking</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 2.6k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">98,000đ</span>
+                            <span class="old-price">128,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Lược Sử Thời Gian', 98000, 'images/book_34.jpg', 'Stephen Hawking')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 35 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="165000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_35.jpg" alt="Vũ Trụ (Cosmos)" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Vũ Trụ (Cosmos)</h4>
+                        <p class="author">Carl Sagan</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 4.0k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">165,000đ</span>
+                            <span class="old-price">210,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Vũ Trụ (Cosmos)', 165000, 'images/book_35.jpg', 'Carl Sagan')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 36 -->
                     <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="190000" data-rating="4.9">
                         <div class="book-cover">
-                            📔
+                            <img src="images/book_36.jpg" alt="Dune: Xứ Cát" loading="lazy">
                             <span class="discount-tag">-24%</span>
                         </div>
-                        <h4>Dune - Xứ Cát (Tập 1)</h4>
+                        <h4>Dune: Xứ Cát</h4>
                         <p class="author">Frank Herbert</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.9 - 890)</span>
+                            <span>(4.9 - 5.3k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">190.000đ</span>
-                            <span class="old-price">250.000đ</span>
+                            <span class="price">190,000đ</span>
+                            <span class="old-price">250,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Dune - Xứ Cát', 190000, '📔', 'Frank Herbert')">
+                        <button class="btn-add-cart" onclick="addToCart('Dune: Xứ Cát', 190000, 'images/book_36.jpg', 'Frank Herbert')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 7 -->
-                    <div class="book-card catalog-book-item" data-cat="kinh-te" data-format="audiobook" data-price="99000" data-rating="4.8">
+                    <!-- Sách 37 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="140000" data-rating="4.8">
                         <div class="book-cover">
-                            🎧
-                            <span class="discount-tag">-30%</span>
+                            <img src="images/book_37.jpg" alt="Gen Vị Kỷ (The Selfish Gene)" loading="lazy">
+                            <span class="discount-tag">-22%</span>
                         </div>
-                        <h4>Tâm Lý Học Về Tiền (Audiobook)</h4>
-                        <p class="author">Morgan Housel</p>
+                        <h4>Gen Vị Kỷ (The Selfish Gene)</h4>
+                        <p class="author">Richard Dawkins</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.8 - 620)</span>
+                            <span>(4.8 - 6.7k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">99.000đ</span>
-                            <span class="old-price">140.000đ</span>
+                            <span class="price">140,000đ</span>
+                            <span class="old-price">180,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Tâm Lý Học Về Tiền (Audiobook)', 99000, '🎧', 'Morgan Housel')">
+                        <button class="btn-add-cart" onclick="addToCart('Gen Vị Kỷ (The Selfish Gene)', 140000, 'images/book_37.jpg', 'Richard Dawkins')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
-
-                    <!-- Sách 8 -->
-                    <div class="book-card catalog-book-item" data-cat="van-hoc" data-format="sach-giay" data-price="105000" data-rating="4.7">
+                    <!-- Sách 38 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="178000" data-rating="4.8">
                         <div class="book-cover">
-                            📕
+                            <img src="images/book_38.jpg" alt="Súng, Vi Trùng Và Thép" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Súng, Vi Trùng Và Thép</h4>
+                        <p class="author">Jared Diamond</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 8.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">178,000đ</span>
+                            <span class="old-price">225,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Súng, Vi Trùng Và Thép', 178000, 'images/book_38.jpg', 'Jared Diamond')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 39 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="sach-giay" data-price="188000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_39.jpg" alt="Gen: Lịch Sử Thân Mật" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Gen: Lịch Sử Thân Mật</h4>
+                        <p class="author">Siddhartha Mukherjee</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 9.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">188,000đ</span>
+                            <span class="old-price">240,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Gen: Lịch Sử Thân Mật', 188000, 'images/book_39.jpg', 'Siddhartha Mukherjee')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 40 -->
+                    <div class="book-card catalog-book-item" data-cat="khoa-hoc" data-format="ebook" data-price="160000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_40.jpg" alt="Trí Tuệ Nhân Tạo (Superintelligence)" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Trí Tuệ Nhân Tạo (Superintelligence)</h4>
+                        <p class="author">Nick Bostrom</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 1.8k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">160,000đ</span>
+                            <span class="old-price">205,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Trí Tuệ Nhân Tạo (Superintelligence)', 160000, 'images/book_40.jpg', 'Nick Bostrom')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 41 -->
+                    <div class="book-card catalog-book-item" data-cat="trinh-tham" data-format="sach-giay" data-price="125000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_41.jpg" alt="Mật Mã Da Vinci" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Mật Mã Da Vinci</h4>
+                        <p class="author">Dan Brown</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 3.2k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">125,000đ</span>
+                            <span class="old-price">160,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Mật Mã Da Vinci', 125000, 'images/book_41.jpg', 'Dan Brown')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 42 -->
+                    <div class="book-card catalog-book-item" data-cat="trinh-tham" data-format="sach-giay" data-price="128000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_42.jpg" alt="Thiên Thần Và Ác Quỷ" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Thiên Thần Và Ác Quỷ</h4>
+                        <p class="author">Dan Brown</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 4.5k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">128,000đ</span>
+                            <span class="old-price">165,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Thiên Thần Và Ác Quỷ', 128000, 'images/book_42.jpg', 'Dan Brown')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 43 -->
+                    <div class="book-card catalog-book-item" data-cat="trinh-tham" data-format="sach-giay" data-price="210000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_43.jpg" alt="Sherlock Holmes: Toàn Tập" loading="lazy">
+                            <span class="discount-tag">-22%</span>
+                        </div>
+                        <h4>Sherlock Holmes: Toàn Tập</h4>
+                        <p class="author">Arthur Conan Doyle</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 5.9k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">210,000đ</span>
+                            <span class="old-price">270,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Sherlock Holmes: Toàn Tập', 210000, 'images/book_43.jpg', 'Arthur Conan Doyle')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 44 -->
+                    <div class="book-card catalog-book-item" data-cat="trinh-tham" data-format="sach-giay" data-price="95000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_44.jpg" alt="Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông</h4>
+                        <p class="author">Agatha Christie</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 7.3k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">95,000đ</span>
+                            <span class="old-price">125,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Án Mạng Trên Chuyến Tàu Tốc Hành Phương Đông', 95000, 'images/book_44.jpg', 'Agatha Christie')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 45 -->
+                    <div class="book-card catalog-book-item" data-cat="trinh-tham" data-format="sach-giay" data-price="135000" data-rating="4.8">
+                        <div class="book-cover">
+                            <img src="images/book_45.jpg" alt="Cô Gái Có Hình Xăm Rồng" loading="lazy">
+                            <span class="discount-tag">-23%</span>
+                        </div>
+                        <h4>Cô Gái Có Hình Xăm Rồng</h4>
+                        <p class="author">Stieg Larsson</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8 - 8.7k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">135,000đ</span>
+                            <span class="old-price">175,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Cô Gái Có Hình Xăm Rồng', 135000, 'images/book_45.jpg', 'Stieg Larsson')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 46 -->
+                    <div class="book-card catalog-book-item" data-cat="thieu-nhi" data-format="sach-giay" data-price="120000" data-rating="5.0">
+                        <div class="book-cover">
+                            <img src="images/book_46.jpg" alt="Harry Potter Và Hòn Đá Phù Thủy" loading="lazy">
                             <span class="discount-tag">-20%</span>
                         </div>
-                        <h4>Cây Cam Ngọt Của Tôi</h4>
-                        <p class="author">José Mauro de Vasconcelos</p>
+                        <h4>Harry Potter Và Hòn Đá Phù Thủy</h4>
+                        <p class="author">J.K. Rowling</p>
                         <div class="book-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(4.7 - 2.1k)</span>
+                            <span>(5.0 - 1.0k)</span>
                         </div>
                         <div class="price-row">
-                            <span class="price">105.000đ</span>
-                            <span class="old-price">130.000đ</span>
+                            <span class="price">120,000đ</span>
+                            <span class="old-price">150,000đ</span>
                         </div>
-                        <button class="btn-add-cart" onclick="addToCart('Cây Cam Ngọt Của Tôi', 105000, '📕', 'José Mauro de Vasconcelos')">
+                        <button class="btn-add-cart" onclick="addToCart('Harry Potter Và Hòn Đá Phù Thủy', 120000, 'images/book_46.jpg', 'J.K. Rowling')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 47 -->
+                    <div class="book-card catalog-book-item" data-cat="thieu-nhi" data-format="sach-giay" data-price="110000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_47.jpg" alt="Anh Chàng Hobbit" loading="lazy">
+                            <span class="discount-tag">-21%</span>
+                        </div>
+                        <h4>Anh Chàng Hobbit</h4>
+                        <p class="author">J.R.R. Tolkien</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 2.4k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">110,000đ</span>
+                            <span class="old-price">140,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Anh Chàng Hobbit', 110000, 'images/book_47.jpg', 'J.R.R. Tolkien')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 48 -->
+                    <div class="book-card catalog-book-item" data-cat="thieu-nhi" data-format="sach-giay" data-price="320000" data-rating="5.0">
+                        <div class="book-cover">
+                            <img src="images/book_48.jpg" alt="Chúa Tể Những Chiếc Nhẫn (Trọn Bộ)" loading="lazy">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <h4>Chúa Tể Những Chiếc Nhẫn (Trọn Bộ)</h4>
+                        <p class="author">J.R.R. Tolkien</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(5.0 - 3.8k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">320,000đ</span>
+                            <span class="old-price">400,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Chúa Tể Những Chiếc Nhẫn (Trọn Bộ)', 320000, 'images/book_48.jpg', 'J.R.R. Tolkien')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 49 -->
+                    <div class="book-card catalog-book-item" data-cat="thieu-nhi" data-format="sach-giay" data-price="68000" data-rating="4.7">
+                        <div class="book-cover">
+                            <img src="images/book_49.jpg" alt="Alice Ở Xứ Sở Thần Tiên" loading="lazy">
+                            <span class="discount-tag">-24%</span>
+                        </div>
+                        <h4>Alice Ở Xứ Sở Thần Tiên</h4>
+                        <p class="author">Lewis Carroll</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7 - 5.1k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">68,000đ</span>
+                            <span class="old-price">90,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Alice Ở Xứ Sở Thần Tiên', 68000, 'images/book_49.jpg', 'Lewis Carroll')">
+                            <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                        </button>
+                    </div>
+                    <!-- Sách 50 -->
+                    <div class="book-card catalog-book-item" data-cat="thieu-nhi" data-format="sach-giay" data-price="280000" data-rating="4.9">
+                        <div class="book-cover">
+                            <img src="images/book_50.jpg" alt="Biên Niên Sử Narnia" loading="lazy">
+                            <span class="discount-tag">-20%</span>
+                        </div>
+                        <h4>Biên Niên Sử Narnia</h4>
+                        <p class="author">C.S. Lewis</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9 - 6.5k)</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">280,000đ</span>
+                            <span class="old-price">350,000đ</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Biên Niên Sử Narnia', 280000, 'images/book_50.jpg', 'C.S. Lewis')">
                             <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                         </button>
                     </div>
@@ -417,21 +1260,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- AI CHATBOT -->
-    <div class="chatbot-widget" id="chatbot">
-        <div class="chat-header" onclick="toggleChat()">
-            <div class="chat-title">
-                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
-            </div>
-            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
-        </div>
-        <div class="chat-body" id="chat-body"></div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
-            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

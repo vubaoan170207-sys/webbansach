@@ -120,16 +120,12 @@
                 <h2>Khám Phá Danh Mục</h2>
             </div>
             <div class="category-grid">
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-heart"></i><span>Tiểu thuyết & Tình cảm</span></a>
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-user-secret"></i><span>Bí ẩn & Trinh thám</span></a>
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-rocket"></i><span>Khoa học viễn tưởng</span></a>
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-ghost"></i><span>Kinh dị & Giật gân</span></a>
-                <a href="danh-muc.html?cat=ky-nang-song" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-seedling"></i><span>Truyền cảm hứng</span></a>
-                <a href="danh-muc.html?cat=kinh-te" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-chart-line"></i><span>Kinh doanh & Kinh tế</span></a>
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-feather-alt"></i><span>Tiểu sử & Hồi ký</span></a>
-                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-child"></i><span>Sách thiếu nhi & Manga</span></a>
-                <a href="danh-muc.html?cat=ky-nang-song" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-graduation-cap"></i><span>Sách học tập & Ngoại ngữ</span></a>
-                <a href="danh-muc.html?cat=ky-nang-song" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-utensils"></i><span>Đời sống & Nấu ăn</span></a>
+                <a href="danh-muc.html?cat=van-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-book"></i><span>Văn học & Tiểu thuyết</span><small class="cat-count">10</small></a>
+                <a href="danh-muc.html?cat=kinh-te" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-chart-line"></i><span>Kinh tế & Đầu tư</span><small class="cat-count">10</small></a>
+                <a href="danh-muc.html?cat=ky-nang-song" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-brain"></i><span>Tâm lý & Kỹ năng sống</span><small class="cat-count">10</small></a>
+                <a href="danh-muc.html?cat=khoa-hoc" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-flask"></i><span>Khoa học & Lịch sử</span><small class="cat-count">10</small></a>
+                <a href="danh-muc.html?cat=trinh-tham" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-user-secret"></i><span>Trinh thám & Bí ẩn</span><small class="cat-count">5</small></a>
+                <a href="danh-muc.html?cat=thieu-nhi" class="cat-item" style="text-decoration:none; color:inherit;"><i class="fas fa-child"></i><span>Thiếu nhi & Kỳ ảo</span><small class="cat-count">5</small></a>
             </div>
         </section>
 
@@ -145,76 +141,142 @@
                 </div>
             </div>
             <div class="slider-container" id="trending-slider">
-                <!-- Book Cards -->
+                <!-- Book Card 1 -->
                 <div class="book-card">
-                    <div class="book-img">📖</div>
+                    <div class="book-img"><img src="images/book_21.jpg" alt="Đắc Nhân Tâm"></div>
                     <h4>Đắc Nhân Tâm</h4>
                     <p class="author">Dale Carnegie</p>
                     <div class="price-row">
                         <span class="price">75.000đ</span>
                         <span class="old-price">100.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Đắc Nhân Tâm', 75000, '📖', 'Dale Carnegie')">
+                    <button class="btn-add-cart" onclick="addToCart('Đắc Nhân Tâm', 75000, 'images/book_21.jpg', 'Dale Carnegie')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
+
+                <!-- Book Card 2 -->
                 <div class="book-card">
-                    <div class="book-img">📘</div>
+                    <div class="book-img"><img src="images/book_01.jpg" alt="Nhà Giả Kim"></div>
                     <h4>Nhà Giả Kim</h4>
                     <p class="author">Paulo Coelho</p>
                     <div class="price-row">
                         <span class="price">65.000đ</span>
                         <span class="old-price">85.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Nhà Giả Kim', 65000, '📘', 'Paulo Coelho')">
+                    <button class="btn-add-cart" onclick="addToCart('Nhà Giả Kim', 65000, 'images/book_01.jpg', 'Paulo Coelho')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
+
+                <!-- Book Card 3 -->
                 <div class="book-card">
-                    <div class="book-img">📗</div>
+                    <div class="book-img"><img src="images/book_11.jpg" alt="Nghĩ Giàu Làm Giàu"></div>
                     <h4>Nghĩ Giàu Làm Giàu</h4>
                     <p class="author">Napoleon Hill</p>
                     <div class="price-row">
                         <span class="price">89.000đ</span>
                         <span class="old-price">120.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Nghĩ Giàu Làm Giàu', 89000, '📗', 'Napoleon Hill')">
+                    <button class="btn-add-cart" onclick="addToCart('Nghĩ Giàu Làm Giàu', 89000, 'images/book_11.jpg', 'Napoleon Hill')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
+
+                <!-- Book Card 4 -->
                 <div class="book-card">
-                    <div class="book-img">📙</div>
+                    <div class="book-img"><img src="images/book_31.jpg" alt="Sapiens: Lược Sử Loài Người"></div>
                     <h4>Sapiens: Lược Sử Loài Người</h4>
                     <p class="author">Yuval Noah Harari</p>
                     <div class="price-row">
                         <span class="price">150.000đ</span>
                         <span class="old-price">190.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Sapiens: Lược Sử Loài Người', 150000, '📙', 'Yuval Noah Harari')">
+                    <button class="btn-add-cart" onclick="addToCart('Sapiens: Lược Sử Loài Người', 150000, 'images/book_31.jpg', 'Yuval Noah Harari')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
+
+                <!-- Book Card 5 -->
                 <div class="book-card">
-                    <div class="book-img">📕</div>
-                    <h4>Tuổi Trẻ Đáng Giá Bao Nhiêu</h4>
-                    <p class="author">Rosie Nguyễn</p>
+                    <div class="book-img"><img src="images/book_22.jpg" alt="Thay Đổi Tí Hon (Atomic Habits)"></div>
+                    <h4>Thay Đổi Tí Hon (Atomic Habits)</h4>
+                    <p class="author">James Clear</p>
                     <div class="price-row">
-                        <span class="price">60.000đ</span>
-                        <span class="old-price">80.000đ</span>
+                        <span class="price">135.000đ</span>
+                        <span class="old-price">175.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Tuổi Trẻ Đáng Giá Bao Nhiêu', 60000, '📕', 'Rosie Nguyễn')">
+                    <button class="btn-add-cart" onclick="addToCart('Thay Đổi Tí Hon (Atomic Habits)', 135000, 'images/book_22.jpg', 'James Clear')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
+
+                <!-- Book Card 6 -->
                 <div class="book-card">
-                    <div class="book-img">📔</div>
+                    <div class="book-img"><img src="images/book_36.jpg" alt="Dune - Xứ Cát"></div>
                     <h4>Dune - Xứ Cát</h4>
                     <p class="author">Frank Herbert</p>
                     <div class="price-row">
                         <span class="price">190.000đ</span>
                         <span class="old-price">250.000đ</span>
                     </div>
-                    <button class="btn-add-cart" onclick="addToCart('Dune - Xứ Cát', 190000, '📔', 'Frank Herbert')">
+                    <button class="btn-add-cart" onclick="addToCart('Dune - Xứ Cát', 190000, 'images/book_36.jpg', 'Frank Herbert')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Book Card 7 -->
+                <div class="book-card">
+                    <div class="book-img"><img src="images/book_02.jpg" alt="Hoàng Tử Bé"></div>
+                    <h4>Hoàng Tử Bé</h4>
+                    <p class="author">Antoine de Saint-Exupéry</p>
+                    <div class="price-row">
+                        <span class="price">55.000đ</span>
+                        <span class="old-price">75.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Hoàng Tử Bé', 55000, 'images/book_02.jpg', 'Antoine de Saint-Exupéry')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Book Card 8 -->
+                <div class="book-card">
+                    <div class="book-img"><img src="images/book_14.jpg" alt="Tâm Lý Học Về Tiền"></div>
+                    <h4>Tâm Lý Học Về Tiền</h4>
+                    <p class="author">Morgan Housel</p>
+                    <div class="price-row">
+                        <span class="price">99.000đ</span>
+                        <span class="old-price">140.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Tâm Lý Học Về Tiền', 99000, 'images/book_14.jpg', 'Morgan Housel')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Book Card 9 -->
+                <div class="book-card">
+                    <div class="book-img"><img src="images/book_46.jpg" alt="Harry Potter Và Hòn Đá Phù Thủy"></div>
+                    <h4>Harry Potter Và Hòn Đá Phù Thủy</h4>
+                    <p class="author">J.K. Rowling</p>
+                    <div class="price-row">
+                        <span class="price">120.000đ</span>
+                        <span class="old-price">150.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Harry Potter Và Hòn Đá Phù Thủy', 120000, 'images/book_46.jpg', 'J.K. Rowling')">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+
+                <!-- Book Card 10 -->
+                <div class="book-card">
+                    <div class="book-img"><img src="images/book_43.jpg" alt="Sherlock Holmes: Toàn Tập"></div>
+                    <h4>Sherlock Holmes: Toàn Tập</h4>
+                    <p class="author">Arthur Conan Doyle</p>
+                    <div class="price-row">
+                        <span class="price">210.000đ</span>
+                        <span class="old-price">270.000đ</span>
+                    </div>
+                    <button class="btn-add-cart" onclick="addToCart('Sherlock Holmes: Toàn Tập', 210000, 'images/book_43.jpg', 'Arthur Conan Doyle')">
                         <i class="fas fa-cart-plus"></i> Thêm vào giỏ
                     </button>
                 </div>
@@ -270,23 +332,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- AI CHATBOT WIDGET -->
-    <div class="chatbot-widget" id="chatbot">
-        <div class="chat-header" onclick="toggleChat()">
-            <div class="chat-title">
-                <i class="fas fa-robot"></i> Trợ lý AI BookHaven
-            </div>
-            <i class="fas fa-chevron-down" id="chat-toggle-icon"></i>
-        </div>
-        <div class="chat-body" id="chat-body">
-            <!-- Tin nhắn sẽ được chèn qua JS -->
-        </div>
-        <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Nhập tin nhắn..." onkeypress="handleChatEnter(event)">
-            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-        </div>
-    </div>
 
     <!-- Liên kết tệp JavaScript -->
     <script src="script.js"></script>

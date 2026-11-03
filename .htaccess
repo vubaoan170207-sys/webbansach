@@ -1,0 +1,2 @@
+# Tự động chuyển hướng vào trang chủ khi vào thư mục gốc
+DirectoryIndex webbansach/index.html index.html

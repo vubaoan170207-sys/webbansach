@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=webbansach/index.html">
+    <title>BookHaven - Đang chuyển hướng đến Trang Chủ...</title>
+    <script>
+        // Tự động chuyển hướng ngay lập tức về trang chủ
+        window.location.replace("webbansach/index.html");
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1e1b4b, #312e81, #0f172a);
+            color: #ffffff;
+            text-align: center;
+        }
+        .redirect-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        h2 { margin-bottom: 12px; font-size: 1.5rem; }
+        p { color: #cbd5e1; margin-bottom: 18px; }
+        a {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        a:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="redirect-box">
+        <h2><i class="fas fa-book-open"></i> BookHaven</h2>
+        <p>Đang chuyển hướng đến Trang chủ...</p>
+        <a href="webbansach/index.html">Nhấn vào đây nếu không tự động chuyển</a>
+    </div>
+</body>
+</html>

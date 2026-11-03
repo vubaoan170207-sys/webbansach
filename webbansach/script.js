@@ -4,7 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initFloatingBackground();
-    initChatbot();
     initCartSystem();
     initGlobalSearch();
     initMobileNav();
@@ -136,9 +135,9 @@ function showToast(message, type = 'success') {
    3. GIỎ HÀNG (Cart Management with LocalStorage)
    ========================================= */
 const DEFAULT_CART = [
-    { title: "Đắc Nhân Tâm", price: 75000, qty: 1, img: "📖", author: "Dale Carnegie" },
-    { title: "Nhà Giả Kim", price: 65000, qty: 1, img: "📘", author: "Paulo Coelho" },
-    { title: "Sapiens: Lược Sử Loài Người", price: 150000, qty: 1, img: "📙", author: "Yuval Noah Harari" }
+    { title: "Đắc Nhân Tâm", price: 75000, qty: 1, img: "images/book_21.jpg", author: "Dale Carnegie" },
+    { title: "Nhà Giả Kim", price: 65000, qty: 1, img: "images/book_01.jpg", author: "Paulo Coelho" },
+    { title: "Sapiens: Lược Sử Loài Người", price: 150000, qty: 1, img: "images/book_31.jpg", author: "Yuval Noah Harari" }
 ];
 
 function getCart() {
@@ -172,7 +171,7 @@ function initCartSystem() {
     updateCartBadges();
 }
 
-function addToCart(title, price, img = '📖', author = 'Tác giả BookHaven') {
+function addToCart(title, price, img = 'images/book_01.jpg', author = 'Tác giả BookHaven') {
     const cart = getCart();
     const existingIndex = cart.findIndex(item => item.title.trim().toLowerCase() === title.trim().toLowerCase());
 
@@ -238,11 +237,15 @@ function renderCartPage() {
     container.innerHTML = cart.map((item, index) => {
         const itemTotal = item.price * (item.qty || 1);
         subtotal += itemTotal;
+        const imgMarkup = (item.img && (item.img.includes('/') || item.img.includes('.'))) 
+            ? `<img src="${item.img}" alt="${item.title}">` 
+            : `${item.img || '📖'}`;
+
         return `
             <tr>
                 <td>
                     <div class="cart-item-info">
-                        <div class="cart-item-icon">${item.img || '📖'}</div>
+                        <div class="cart-item-icon">${imgMarkup}</div>
                         <div>
                             <strong style="color: #2d3748; font-size: 0.95rem;">${item.title}</strong>
                             <div style="font-size: 0.8rem; color: #718096;">${item.author || 'Tác giả BookHaven'}</div>
@@ -373,88 +376,7 @@ function slideRight(sliderId) {
 }
 
 /* =========================================
-   7. AI CHATBOT LỰA CHỌN SÁCH
-   ========================================= */
-const chatWidget = document.getElementById('chatbot');
-const chatBody = document.getElementById('chat-body');
-const chatInput = document.getElementById('chat-input');
-const chatToggleIcon = document.getElementById('chat-toggle-icon');
-let isChatOpen = false;
-
-function initChatbot() {
-    if (!chatWidget) return;
-    chatWidget.classList.add('collapsed');
-
-    setTimeout(() => {
-        if (!isChatOpen) {
-            toggleChat();
-            appendMessage('bot', 'Xin chào! Tôi là trợ lý AI BookHaven. Bạn muốn tìm sách thể loại nào hay cần tư vấn sách hay hôm nay?');
-        }
-    }, 2500);
-}
-
-function toggleChat() {
-    if (!chatWidget) return;
-    isChatOpen = !isChatOpen;
-    if (isChatOpen) {
-        chatWidget.classList.remove('collapsed');
-        if (chatToggleIcon) {
-            chatToggleIcon.classList.remove('fa-chevron-up');
-            chatToggleIcon.classList.add('fa-chevron-down');
-        }
-    } else {
-        chatWidget.classList.add('collapsed');
-        if (chatToggleIcon) {
-            chatToggleIcon.classList.remove('fa-chevron-down');
-            chatToggleIcon.classList.add('fa-chevron-up');
-        }
-    }
-}
-
-function appendMessage(sender, text) {
-    if (!chatBody) return;
-    const msgDiv = document.createElement('div');
-    msgDiv.classList.add('message');
-    msgDiv.classList.add(sender === 'bot' ? 'bot-msg' : 'user-msg');
-    msgDiv.textContent = text;
-
-    chatBody.appendChild(msgDiv);
-    chatBody.scrollTop = chatBody.scrollHeight;
-}
-
-function sendMessage() {
-    if (!chatInput) return;
-    const text = chatInput.value.trim();
-    if (!text) return;
-
-    appendMessage('user', text);
-    chatInput.value = '';
-
-    setTimeout(() => {
-        const lower = text.toLowerCase();
-        let reply = "Tôi có thể giúp bạn tìm thêm các sách hot! Hãy xem qua mục Sách mới hoặc Bán chạy trên thanh menu nhé.";
-
-        if (lower.includes('kinh tế') || lower.includes('kinh doanh') || lower.includes('tiền')) {
-            reply = "Về Kinh tế & Tài chính, BookHaven gợi ý: 'Nghĩ Giàu Làm Giàu', 'Tâm Lý Học Về Tiền', và 'Chiến Tranh Tiền Tệ'.";
-        } else if (lower.includes('văn học') || lower.includes('tiểu thuyết')) {
-            reply = "Văn học đỉnh cao: 'Nhà Giả Kim', 'Rừng Na Uy', 'Cây Cam Ngọt Của Tôi' đang được rất nhiều bạn đọc yêu thích!";
-        } else if (lower.includes('kỹ năng') || lower.includes('bản thân')) {
-            reply = "Sách phát triển bản thân: 'Đắc Nhân Tâm', 'Nguyên Lý 80/20', 'Tuổi Trẻ Đáng Giá Bao Nhiêu' là lựa chọn tuyệt vời!";
-        } else if (lower.includes('giá') || lower.includes('khuyến mãi') || lower.includes('sale')) {
-            reply = "Đừng bỏ lỡ trang 'Khuyến mãi / Flash Sale' đang có mã giảm giá tới 50% và freeship cho đơn từ 300k bạn nhé!";
-        }
-        appendMessage('bot', reply);
-    }, 800);
-}
-
-function handleChatEnter(event) {
-    if (event.key === 'Enter') {
-        sendMessage();
-    }
-}
-
-/* =========================================
-   8. FLASH SALE COUNTDOWN & VOUCHER COPY
+   7. FLASH SALE COUNTDOWN & VOUCHER COPY
    ========================================= */
 function initFlashSaleCountdown() {
     let duration = 24 * 3600 + 45 * 60; // 24 giờ 45 phút đếm ngược
@@ -499,9 +421,12 @@ function initCatalogPage() {
         heading.textContent = `Kết quả tìm kiếm cho: "${searchKeyword}"`;
     } else if (categoryFilter && heading) {
         const catMap = {
-            'van-hoc': 'Sách Văn Học',
-            'kinh-te': 'Sách Kinh Tế & Kinh Doanh',
-            'ky-nang-song': 'Sách Kỹ Năng Sống'
+            'van-hoc': 'Sách Văn Học & Tiểu Thuyết',
+            'kinh-te': 'Sách Kinh Tế & Đầu Tư',
+            'ky-nang-song': 'Sách Tâm Lý & Kỹ Năng Sống',
+            'khoa-hoc': 'Sách Khoa Học & Lịch Sử',
+            'trinh-tham': 'Sách Trinh Thám & Bí Ẩn',
+            'thieu-nhi': 'Sách Thiếu Nhi & Kỳ Ảo'
         };
         heading.textContent = catMap[categoryFilter] || 'Danh Mục Sách';
     }
@@ -665,4 +590,4 @@ function toggleFaq(item) {
     if (icon) {
         icon.className = isOpen ? 'fas fa-chevron-down faq-icon' : 'fas fa-chevron-up faq-icon';
     }
-}
+}
